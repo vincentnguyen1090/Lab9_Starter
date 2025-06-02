@@ -105,6 +105,10 @@ async function init() {
               throw new Error("Division by zero err");
             }
 
+            if (!firstNum || !secondNum || !operator) {
+              throw new Error("Missing input values");
+            }
+            
             const output = document.querySelector('output');
             output.innerHTML = eval(`${firstNum} ${operator} ${secondNum}`);
           } catch (err) {
